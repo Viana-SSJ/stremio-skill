@@ -1,6 +1,6 @@
 # stremio-skill
 
-A [pi coding agent](https://github.com/badlogic/pi-mono) skill that turns "I want to watch *X*" into a playing video. It drives Stremio on macOS end to end: finds the title, checks real stream availability, ranks sources, opens the app, and installs stream addons — with strict malware vetting before anything is ever installed.
+A [pi coding agent](https://github.com/badlogic/pi-mono) skill that turns "I want to watch *X*" into a playing video. It drives Stremio on macOS and Windows end to end: finds the title, checks real stream availability, ranks sources, opens the app, and installs stream addons — with strict malware vetting before anything is ever installed.
 
 ## What you say → what happens
 
@@ -35,4 +35,10 @@ git clone git@github.com:Viana-SSJ/stremio-skill.git ~/.agents/skills/stremio
 
 (Any discovered skills location works — `~/.agents/skills/` or `<project>/.agents/skills/`.) Restart pi or run `/reload`, then check `/skill:stremio`.
 
-**Requirements:** macOS, Stremio desktop installed, `curl`. No extra dependencies.
+**Requirements:** macOS or Windows 10/11, Stremio desktop installed, `curl` (bundled with Windows 10+ as `curl.exe`). No extra dependencies.
+
+On Windows the same clone works in PowerShell:
+
+```powershell
+git clone https://github.com/Viana-SSJ/stremio-skill.git "$HOME\.agents\skills\stremio"
+```
